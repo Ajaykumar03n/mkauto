@@ -16,7 +16,7 @@ const Student = mongoose.models.Student || mongoose.model('Student', studentSche
 
 // GET /api/students - return all students
 const jwt = require('jsonwebtoken');
-const JWT_SECRET = 'your_secret_key';
+const JWT_SECRET = process.env.JWT_SECRET || 'your_secret_key'; // ✅ Use env variable
 
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
@@ -31,7 +31,7 @@ function authenticateToken(req, res, next) {
 }
 
 // In your students.js route file:
-router.get('/', authenticateToken, async (req, res) => {
+router.get('/list', authenticateToken, async (req, res) => {
   try {
     const students = await Student.find();
     res.json({ students });
