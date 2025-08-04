@@ -1,0 +1,38 @@
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fafafa;
+  color: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.students-table th, .students-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.students-table th {
+  background: #6a1b9a;
+  color: #fff;
+  font-weight: 600;
+}
+
+.students-table tr:last-child td {
+  border-bottom: none;
+}
+
+.students-table tr:hover {
+  background: #f3e5f5;
+}
+.form-boxstudents-table {
+  background: white;
+  padding: 30px 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 900px;
+  color: #333;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+  background-attachment: fixed;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 90vh;
+  padding: 40px 20px;
+}
+
+.form-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  color: #333;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.borderless input, .borderless select, .borderless textarea {
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #4a148c;
+}
+
+.admin-access {
+  background: transparent;
+  color: #6a1b9a;
+  font-weight: bold;
+  border: 2px solid #6a1b9a;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* Wrapper to detect hover in bottom-right */
+.admin-hover-area {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 999;
+}
+
+/* Hidden by default */
+.admin-float {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
+  background: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* On hover, show the button */
+.admin-hover-area:hover .admin-float {
+  opacity: 1;
+  pointer-events: auto;
+}

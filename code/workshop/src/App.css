@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #6a1b9a; /* purple */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-box {
+  background: white;
+  border-radius: 12px;
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #4a148c;
+  line-height: 1.4;
+}
+
+.subheading {
+  font-weight: 600;
+  color: #6a1b9a;
+  margin-bottom: 8px;
+}
+
+.description {
+  color: #444;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  background-color: #6a1b9a;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4a148c;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #6a1b9a 0%, #8e24aa 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: url("https://www.transparenttextures.com/patterns/circuits.png");
+  background-repeat: repeat;
+}
+
+.form-box {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  border-radius: 12px;
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+}
