@@ -27,7 +27,6 @@ app.use('/api/students', studentsRouter);
 
 const sturecordRouter = require('./routes/sturecord');
 app.use('/api/sturecord', sturecordRouter);
-app.use('https://git.new/pathToRegexpError', someRouter);
 mongoose
   .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
