@@ -19,7 +19,7 @@ function StudentsList() {
       }
       setLoading(true);
       try {
-        const response = await fetch("https://mkautoreg.onrender.com/api/sturecord/list", {
+        const response = await fetch("https://mkautoreg.onrender.com/api/students/list", {
           headers: {
             Authorization: `Bearer ${token}`
           }
