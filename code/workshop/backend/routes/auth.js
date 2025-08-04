@@ -1,16 +1,12 @@
 const express = require('express');
-
+const jwt = require('jsonwebtoken');
 const router = express.Router();
 
-
-
-// Login
-const jwt = require('jsonwebtoken');
-const JWT_SECRET = process.env.JWT_SECRET || 'your_secret_key'; // ✅ Use env variable
+const JWT_SECRET = process.env.JWT_SECRET;
+const ADMIN_PASSWORD = 'admin123';
 
 router.post('/login', (req, res) => {
   const { password } = req.body;
-  const ADMIN_PASSWORD = 'admin123';
   if (!password) {
     return res.status(400).json({ message: 'Password is required' });
   }
