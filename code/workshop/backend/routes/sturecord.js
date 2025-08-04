@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const jwt = require('jsonwebtoken');
 
-const JWT_SECRET = 'your_secret_key';
-
+// Student schema/model (reuse if already defined elsewhere)
 const studentSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -16,7 +14,10 @@ const studentSchema = new mongoose.Schema({
 });
 const Student = mongoose.models.Student || mongoose.model('Student', studentSchema);
 
-// Middleware to authenticate token
+// GET /api/students - return all students
+const jwt = require('jsonwebtoken');
+const JWT_SECRET = 'your_secret_key';
+
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
@@ -29,6 +30,7 @@ function authenticateToken(req, res, next) {
   });
 }
 
+// In your students.js route file:
 router.get('/', authenticateToken, async (req, res) => {
   try {
     const students = await Student.find();
