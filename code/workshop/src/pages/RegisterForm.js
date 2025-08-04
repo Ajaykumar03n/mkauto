@@ -16,7 +16,7 @@ function RegisterForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/students/register", {
+      const response = await fetch("http://https://mkautoreg.onrender.com/api/students/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

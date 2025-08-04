@@ -17,7 +17,7 @@ function AdminLogin() {
     setErrorMessage("");
     setSuccessMessage("");
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/login", {
+      const response = await axios.post("http://https://mkautoreg.onrender.com/api/auth/login", {
         password: password,
       });
       setSuccessMessage(response.data.message);
