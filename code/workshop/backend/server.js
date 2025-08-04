@@ -14,7 +14,7 @@ app.use(express.json());
 
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:3000', // Change to your frontend URL in production
+  origin: 'https://registerform-flame.vercel.app/', // Change to your frontend URL in production
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true, // Include credentials if needed
 };
@@ -27,7 +27,7 @@ app.use('/api/students', studentsRouter);
 
 const sturecordRouter = require('./routes/sturecord');
 app.use('/api/sturecord', sturecordRouter);
-
+app.use('https://git.new/pathToRegexpError', someRouter);
 mongoose
   .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
