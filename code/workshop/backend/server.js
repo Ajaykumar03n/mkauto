@@ -15,11 +15,12 @@ app.use(express.json());
 // CORS configuration
 const corsOptions = {
   origin: 'https://registerform-flame.vercel.app', // ✅ NO trailing slash
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST'],
   credentials: true,
 };
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+console.log("CORS Origin Configured As:", corsOptions.origin);
+
 
 app.use('/api/auth', authRoutes);
 const studentsRouter = require('./routes/students');
