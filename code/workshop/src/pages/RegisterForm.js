@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./FormStyle.css";
 import "./RegisterForm.css";
 
@@ -7,7 +6,6 @@ function RegisterForm() {
   const [formData, setFormData] = useState({
     name: "", email: "", phone: "", college: "", department: "", year: "", reason: ""
   });
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -53,9 +51,6 @@ function RegisterForm() {
           <textarea name="reason" placeholder="Why are you interested in electronics?" value={formData.reason} onChange={handleChange} />
           <button type="submit">Submit</button>
         </form>
-        <div className="admin-hover-area">
-          <button className="admin-float" onClick={() => navigate("/admin")}>Admin Login</button>
-        </div>
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+  background: url(https://images.stockcake.com/public/d/4/1/d41766a5-3479-49e9-a990-79a6d058e13c/electronic-design-artistry-stockcake.jpg);
+  background-size: cover;
   background-attachment: fixed;
   color: white;
 }
@@ -14,13 +15,14 @@ body {
   padding: 40px 20px;
 }
 
+
 .form-box {
   background: white;
   padding: 40px 30px;
   border-radius: 16px;
   width: 100%;
   max-width: 600px;
-  color: #333;
+  color: transparent;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
@@ -37,7 +39,7 @@ textarea {
   resize: vertical;
 }
 
-button {
+.form-box button {
   width: 100%;
   padding: 12px;
   background: #6a1b9a;
@@ -47,7 +49,7 @@ button {
   font-size: 16px;
 }
 
-button:hover {
+.form-box button:hover {
   background: #4a148c;
 }
 
