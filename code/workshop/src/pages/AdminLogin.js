@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
+import "./AdminLogin.css";
 
 
 function AdminLogin() {
@@ -30,11 +30,11 @@ function AdminLogin() {
   };
 
   return (
-    <div className="container">
-      <div className="form-box">
+    <div className="admin-login-container">
+      <div className="admin-login-box">
         <h1>🔒 Admin Login</h1>
-        {errorMessage && <div style={{ color: 'red', marginBottom: '10px' }}>{errorMessage}</div>}
-        {successMessage && <div style={{ color: 'green', marginBottom: '10px' }}>{successMessage}</div>}
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
+        {successMessage && <div className="success-message">{successMessage}</div>}
         <input type="password" placeholder="Enter Admin Password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <button onClick={handleLogin}>Login</button>
       </div>

@@ -1,0 +1,92 @@
+.admin-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(https://images.stockcake.com/public/d/4/1/d41766a5-3479-49e9-a990-79a6d058e13c/electronic-design-artistry-stockcake.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.admin-login-box {
+  background: rgba(255,255,255,0.92);
+  padding: 36px 28px 28px 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(33,150,243,0.13), 0 2px 4px 0 rgba(0,0,0,0.08);
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.admin-login-box h1 {
+  color: #1976d2;
+  margin-bottom: 24px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.admin-login-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  background: #f7faff;
+  font-size: 1rem;
+  color: #333;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(33,150,243,0.03);
+}
+
+.admin-login-box input[type="password"]:focus {
+  border: 1.5px solid #1976d2;
+  background: #e3f2fd;
+  box-shadow: 0 0 0 2px #90caf9;
+}
+
+.admin-login-box button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #1976d2 60%, #2196f3 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.admin-login-box button:hover {
+  background: linear-gradient(90deg, #2196f3 60%, #1976d2 100%);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(33,150,243,0.18);
+}
+
+.admin-login-box .error-message {
+  color: #d32f2f;
+  margin-bottom: 10px;
+  font-size: 0.98rem;
+}
+
+.admin-login-box .success-message {
+  color: #388e3c;
+  margin-bottom: 10px;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 500px) {
+  .admin-login-box {
+    padding: 18px 6vw 18px 6vw;
+    border-radius: 12px;
+    max-width: 98vw;
+  }
+  .admin-login-box h1 {
+    font-size: 1.1rem;
+  }
+}
