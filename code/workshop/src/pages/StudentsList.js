@@ -51,7 +51,7 @@ function StudentsList() {
       <div className="form-boxstudents-table">
         <h1>📋 Registered Students</h1>
         {students.length > 0 && (
-          <button style={{ marginBottom: 16 }} onClick={handleDownload}>
+          <button className="download-btn" onClick={handleDownload}>
             Download as Excel
           </button>
         )}
@@ -62,20 +62,22 @@ function StudentsList() {
         ) : students.length === 0 ? (
           <p>No students registered yet.</p>
         ) : (
-          <table className="students-table">
-            <thead>
-              <tr>
-                <th>Name</th><th>Email</th><th>Phone</th><th>College</th><th>Department</th><th>Year</th><th>Reason</th>
-              </tr>
-            </thead>
-            <tbody>
-              {students.map((s, i) => (
-                <tr key={i}>
-                  <td>{s.name}</td><td>{s.email}</td><td>{s.phone}</td><td>{s.college}</td><td>{s.department}</td><td>{s.year}</td><td>{s.reason}</td>
+          <div className="table-responsive">
+            <table className="students-table">
+              <thead>
+                <tr>
+                  <th>Name</th><th>Email</th><th>Phone</th><th>College</th><th>Department</th><th>Year</th><th>Reason</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {students.map((s, i) => (
+                  <tr key={i}>
+                    <td>{s.name}</td><td>{s.email}</td><td>{s.phone}</td><td>{s.college}</td><td>{s.department}</td><td>{s.year}</td><td>{s.reason}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         )}
       </div>
     </div>
